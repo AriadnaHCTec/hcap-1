@@ -1,7 +1,6 @@
 import numpy as np
 def convolucion(A,B):
     C=np.zeros((len(A)-2,len(A[0])-2))
-    
     for i1 in range(len(C)):
         for j1 in range(len(C[0])):
             suma=0
@@ -19,3 +18,11 @@ B = np.array(filtro)
 C = convolucion(A,B)
 
 print(C)
+
+matriz2 = [[1,2,3,4,5,6],[7,8,9,10,11,12],[0,0,1,16,17,18],[0,1,0,7,23,24],[1,7,6,5,4,3]]
+filtro2 = [[1,1,1],[0,0,0],[2,10,3]]
+A = np.array(matriz2)
+B=np.array(filtro2)
+C = convolucion(A,B)
+print(C)
+
